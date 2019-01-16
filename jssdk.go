@@ -5,6 +5,9 @@ type WechatJSSDK struct {
 	AppSecret   string
 	AccessToken string
 	Ticket      string
+	NonceStr    string
+	Timestamp   int64
+	Signature   string
 }
 
 func New(appId string, appSecret string) *WechatJSSDK {
