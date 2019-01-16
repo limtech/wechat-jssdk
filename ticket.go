@@ -10,10 +10,10 @@ const (
 )
 
 type TicketData struct {
-	ErrCode   int    `json:"errcode"`
-	ErrMsg    string `json:"errmsg"`
 	Ticket    string `json:"ticket"`
 	ExpiresIn int    `json:"expires_in"`
+	ErrCode   int    `json:"errcode"`
+	ErrMsg    string `json:"errmsg"`
 }
 
 func (self *WechatJSSDK) GetTicket() (TicketData, error) {

@@ -11,7 +11,7 @@ const (
 
 type AccessTokenData struct {
 	AccessToken string `json:"access_token"`
-	ExpiresIn   string `json:"expires_in"`
+	ExpiresIn   int    `json:"expires_in"`
 	ErrCode     int    `json:"errcode"`
 	ErrMsg      string `json:"errmsg"`
 }
