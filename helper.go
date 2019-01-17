@@ -3,7 +3,6 @@ package jssdk
 import (
 	"crypto/md5"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -23,7 +22,5 @@ func HttpGet(url string) ([]byte, error) {
 }
 
 func RandomString() string {
-	h := md5.New()
-	io.WriteString(h, time.Now().Format(time.RFC3339Nano))
-	return fmt.Sprintf("%x", h.Sum(nil))
+	return fmt.Sprintf("%x", md5.Sum([]byte(time.Now().Format(time.RFC3339Nano))))
 }
