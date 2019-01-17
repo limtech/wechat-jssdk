@@ -1,7 +1,7 @@
 package jssdk
 
 type JSSDK_CONFIG struct {
-	AppID     string `json:"app_id"`
+	AppID     string `json:"appId"`
 	Timestamp int64  `json:"timestamp"`
 	NonceStr  string `json:"nonceStr"`
 	Signature string `json:"signature"`
